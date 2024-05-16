@@ -16,3 +16,5 @@ I have multiple commits with conflicts
 FEATURE
 
 HOTFIX FEATURE
+
+NEW FEATURE
