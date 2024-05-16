@@ -9,3 +9,5 @@ This is my feature 1 commit
 This is my feature 2 commit
 
 This is my feature 3 commit
+
+this is my feature commit
