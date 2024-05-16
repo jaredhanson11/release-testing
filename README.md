@@ -9,3 +9,5 @@ This is my feature 1 commit
 This is my feature 2 commit
 
 This is my feature 3 commit
+
+I have multiple commits with conflicts
