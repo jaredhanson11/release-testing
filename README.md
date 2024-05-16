@@ -12,3 +12,7 @@ This is my feature 3 commit
 
 this is my feature commit
 I have multiple commits with conflicts
+
+FEATURE
+
+HOTFIX FEATURE
