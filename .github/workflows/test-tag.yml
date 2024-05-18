@@ -1,0 +1,12 @@
+name: Test tags
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    name: Echo tags
+    steps:
+      - run: echo ${{ github.ref }}
+      - run: echo ${{ toJSON(github) }}

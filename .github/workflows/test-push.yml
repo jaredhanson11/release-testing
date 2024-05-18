@@ -1,0 +1,12 @@
+name: Test branches
+on:
+  push:
+    branches:
+      - main
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    name: Echo branch
+    steps:
+      - run: echo ${{ github.ref }}
+      - run: echo ${{ toJSON(github) }}
