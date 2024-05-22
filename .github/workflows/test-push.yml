@@ -8,5 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Echo branch
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: TEST
+        run: |
+          ls -a
+          git log HEAD -1 --no-color
+          ls .git
       - run: echo ${{ github.ref }}
       - run: echo ${{ toJSON(github) }}
