@@ -1,0 +1,17 @@
+name: Test checkout
+on:
+  push:
+    branches:
+      - main
+jobs:
+  echo:
+    runs-on: ubuntu-latest
+    name: Echo branch
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - id: folders
+        uses: philips-labs/list-folders-action@v1
+        with:
+          path: ./path/to/folder
+      - run: echo "${{ steps.folders.outputs }}"
