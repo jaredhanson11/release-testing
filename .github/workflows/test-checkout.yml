@@ -18,8 +18,9 @@ jobs:
         working-directory: testdir
       - uses: valitydev/action-download-file@v1
         with:
-          url: https://github.com/valitydev/action-download-file/raw/master/README.md
+          url: https://github.com/valitydev/action-download-file/raw/master/LICENSE
           target-path: .
       - run: ls -alrt
         working-directory: ./
-      - run: echo "${{ steps.folders.outputs }}"
+      - run: ls -alrt
+        working-directory: ../
