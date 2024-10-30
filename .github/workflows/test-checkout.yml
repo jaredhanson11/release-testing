@@ -7,14 +7,19 @@ jobs:
   echo:
     runs-on: ubuntu-latest
     name: Echo branch
+    defaults:
+      run:
+        working-directory: testdir
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - run: ls -alrt
       - run: ls -alrt
         working-directory: testdir
-      - id: folders
-        uses: philips-labs/list-folder-action@v1
+      - uses: valitydev/action-download-file@v1
         with:
-          path: ./testdir
+          url: https://github.com/valitydev/action-download-file/raw/master/README.md
+          target-path: .
+      - run: ls -alrt
+        working-directory: ./
       - run: echo "${{ steps.folders.outputs }}"
